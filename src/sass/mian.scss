@@ -1,3 +1,7 @@
+@import 'override';
+@import 'utility';
+@import 'utility_colors';
+
 *{
     margin: 0;
     padding: 0;
@@ -6,4 +10,36 @@
 body{
     font-size: 10px;
 
+}
+
+.title{
+    background-color: aquamarine;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.btnDiv{
+    // background-color: aquamarine;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    .facebookBtn{
+        width: 17rem;
+        border-radius: .3rem;
+        margin: 0.3rem ;
+        color: white;
+        background-color: #4267B2;
+        border: 0 solid black;
+    }
+    .googleBtn{
+        width: 17rem;
+        border-radius: .3rem;
+        color: white;
+        background-color: #DB4437;
+        border: 0 solid black;
+
+    }
 }

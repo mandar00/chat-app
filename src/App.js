@@ -1,5 +1,4 @@
-import 'rsuite/dist/rsuite.min.css';
-import './sass/mian.css';
+// import 'rsuite/dist/rsuite.min.css';
 import {Switch,Route} from "react-router-dom"
 import PrivateRoute from './components/PrivateRoute';
 import SignIn from "./pages/SignIn"

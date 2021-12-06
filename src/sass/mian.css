@@ -8,4 +8,11 @@
 body {
   font-size: 10px;
 }
+
+.title {
+  background-color: aquamarine;
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+}
 /*# sourceMappingURL=mian.css.map */
