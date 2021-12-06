@@ -1,13 +1,22 @@
 import React from 'react'
 import {Route,Redirect} from "react-router-dom"
+import { Container ,Loader} from 'rsuite';
+import { useProfile } from '../context/ProfileContext';
 
 const PrivateRoute=({children,...routeProps}) =>{
   //get each and every prop in routeProps
-    console.log(routeProps)
-    const profile= false;
+    // console.log(routeProps)
+    const {profile,isLoading}= useProfile();
+    console.log(profile);
     // const navigate=useNavigate();
 
-    if(!profile){
+  if(isLoading && !profile){
+    return <Container>
+      <Loader center vertical size="md" content="Loading" speed="slow"></Loader>
+    </Container>
+  }
+
+    if(!profile && !isLoading){
         return <Redirect to="/signin" />
     }
 return(

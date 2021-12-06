@@ -4,10 +4,13 @@ import PrivateRoute from './components/PrivateRoute';
 import SignIn from "./pages/SignIn"
 import Home from './pages/Home';
 import PublicRouter from './components/PublicRouter';
+import { ProfileProvider } from "./context/ProfileContext";
 
 function App() {
   return (
     <>
+      <ProfileProvider>
+        
       <Switch>
         <PublicRouter  path="/signin" >
         {/* if profile exist then dont show sign in page redirect to home page  */}
@@ -18,6 +21,8 @@ function App() {
           <Home/>
         </PrivateRoute>
       </Switch>
+      </ProfileProvider>
+  
     </>
   );
 }
